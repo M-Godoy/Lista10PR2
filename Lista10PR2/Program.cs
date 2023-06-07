@@ -101,6 +101,7 @@ namespace Lista10PR2
             int opcao;
             do
             {
+
                 Console.WriteLine("****MENU****");
                 Console.WriteLine("Digite 0 - Sair");
                 Console.WriteLine("Digite 1 - Exercício 1 ");
