@@ -87,14 +87,90 @@ namespace Lista10PR2
         public static void Exercício3()
         {
             Console.WriteLine("Aqui será codificado o exercício 3");
+            float media, soma = 0;
+            int n, i = 0;
+            Console.WriteLine("Digite o tamanho do vetor: ");
+            n = int.Parse(Console.ReadLine());
+
+            float[] vetor = new float[n];
+            if (n < 0)
+            {
+                Console.WriteLine("Tente novamente, com um número maoir que zero");
+            }
+
+            Random rand = new Random(); //criação de números aleatórios
+            for (; i < n; i++)
+            {
+                vetor[i] = rand.Next(10, 100);// rand.Next() cria números aleatório
+                soma += vetor[i];
+            }
+            
+            media = soma / n;
+
+            for (; i < n; i++)
+            {
+                if (vetor[i] >= media)
+                    Console.WriteLine("posição []" + vetor[i]);
+
+            }
+            Console.WriteLine("A média dos números apresentados dentro do vetor é: " + media);
+            Console.ReadKey();
         }
         public static void Exercício4()
         {
             Console.WriteLine("Aqui será codificado o exercício 4");
+            int n, i=0;
+
+            Console.WriteLine("Digite o valor para o vetor");
+            n=int.Parse(Console.ReadLine());
+
+            string[] vetor = new string[n];
+            for (; i < n; i++)
+            {
+                Console.WriteLine("Digite o nome na lista de presença");
+                vetor[i] = Console.ReadLine();
+            }
+            for (; i < n; i++)
+            {
+                Console.WriteLine("posição []" + vetor[i]);
+            }
+            Console.ReadKey();
+
         }
         public static void Exercício5()
         {
             Console.WriteLine("Aqui será codificado o exercício 5");
+
+            int n, i = 0, pares=0, impares=0;
+
+            Console.WriteLine("Digite o tamanho do vetor: ");
+            n = int.Parse(Console.ReadLine());
+
+            int[] vetor = new int[n];
+            if (n < 0)
+            {
+                Console.WriteLine("Tente novamente, com um número maoir que zero");
+            }
+
+            Random rand = new Random(); //criação de números aleatórios
+            for (; i < n; i++)
+            {
+                vetor[i] = rand.Next(10, 100);// rand.Next() cria números aleatório
+
+                if(vetor[i] % 2== 0)
+                {
+                    pares++;
+                }
+                else
+                {
+                    impares++;
+                }
+            }
+
+            Console.WriteLine("De todos os números aleatórios presentes no vetor são pares: " + pares);
+            Console.WriteLine("De todos os números aleatórios presentes no vetor são ímpares: " + impares);
+
+            Console.ReadKey();
         }
         static void Main(string[] args)
         {
